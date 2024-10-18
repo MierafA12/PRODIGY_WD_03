@@ -9,7 +9,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-   
+    gap: 20px;
  }
  body::before {
     content: '';
@@ -31,8 +31,20 @@
     grid-template-rows: repeat(3,100px);
     grid-template-columns: repeat(3,100px); 
    }
-.them-selecter{
-    align-self: start;
+.theme-selector {
+    color:black;
+    font-weight: bold;
+    font-size: 20px;
+    top: 20px; /* Keep it at the top of the page */
+    left: 20px; /* Align it to the left */
+    z-index: 1;
+    margin: 20px;
+}
+select{
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+
 }
 button{
     border: 1px solid black;
@@ -40,5 +52,17 @@ button{
     font-size: 40px;
     font-weight: bold;
 }
+.player-x {
+    background-image: url('x-background.jpg'); /* Replace with your actual X background image */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
 
-
+/* Background for player O */
+.player-o {
+    background-image: url('o.jpg'); /* Replace with your actual O background image */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}

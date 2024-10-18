@@ -3,31 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet "  href="f.css">
-    <title>tic-tie-toe</title>
+    <link rel="stylesheet" href="f.css">
+    <title>Tic-Tac-Toe</title>
 </head>
-<body>
+<body class="player-x">
     <div class="theme-selector">
-        <label for="theme">Choose a Theme: </label>
+        <label for="theme"> Theme: </label>
         <select id="theme">
             <option value="classic">Classic</option>
             <option value="fantasy">Fantasy</option>
             <option value="modern">Modern</option>
         </select>
     </div>
+
     <div class="theGame">
-    <div class="all">
-        <button><div  id="btn1">o</div></button>
-        <button><div  id="btn2">x</div></button>
-        <button><div  id="btn3">o</div></button>
-        <button><div  id="btn4">x</div></button>
-        <button><div  id="btn5">o</div></button>
-        <button><div  id="btn6">x</div></button>
-        <button><div  id="btn7">x</div></button>
-        <button><div  id="btn8">o</div></button>
-        <button><div  id="btn9">x</div></button>
+        <div class="all">
+            <button><div id="btn1"></div></button>
+            <button><div id="btn2"></div></button>
+            <button><div id="btn3"></div></button>
+            <button><div id="btn4"></div></button>
+            <button><div id="btn5"></div></button>
+            <button><div id="btn6"></div></button>
+            <button><div id="btn7"></div></button>
+            <button><div id="btn8"></div></button>
+            <button><div id="btn9"></div></button>
+        </div>
+
+        <!-- Section to display the winner -->
+        <div id="winner" class="winner-message"></div>
+
+        <!-- Section to display the move history -->
+        <div class="history">
+            <h2>Move History</h2>
+            <ul id="history-list"></ul>
+        </div>
     </div>
-</div>
+
     <script src="tic-tac-toe.js"></script>
-</body> 
+</body>
 </html>

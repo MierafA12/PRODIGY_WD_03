@@ -1,17 +1,153 @@
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
- body{
+
+body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    background-color: #f0f0f0;
+    font-family: 'Helvetica Neue', sans-serif;
     overflow: hidden;
     gap: 20px;
- }
- body::before {
+}
+
+.theGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Add space between the elements */
+}
+
+.all {
+    width: 250px;
+    height: 250px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.theme-selector {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+button {
+    border: none;
+    background-color: #fff;
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.player-x {
+    background-image: url('x-background.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.player-o {
+    background-image: url('o-background.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.history {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#winner {
+    color: #ff6600;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between; /* Adjust to space buttons evenly */
+    width: 100%; /* Ensure controls span the width of the container */
+    max-width: 250px; /* Align width with the game grid */
+    gap: 15px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+.controls button {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    flex: 1; /* Make buttons take equal space */
+    transition: background-color 0.3s ease;
+}
+
+button#reset {
+    background-color: #dc3545;
+    color: white;
+}
+
+button#reset:hover {
+    background-color: #c82333;
+}
+
+button#start {
+    background-color: #28a745;
+    color: white;
+}
+
+button#start:hover {
+    background-color: #218838;
+}
+
+.ffff {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+body::before {
     content: '';
     position: absolute;
     top: 0;
@@ -21,48 +157,6 @@
     background-image: url("ttt.jpg");
     background-size: cover;
     background-position: center;
-    filter: blur(4px); /* Blurs the background */
-    z-index: -1; /* Send background behind the content */
-}
-.all{
-    width: 250px;
-    height: 250px;
-    display: grid;
-    grid-template-rows: repeat(3,100px);
-    grid-template-columns: repeat(3,100px); 
-   }
-.theme-selector {
-    color:black;
-    font-weight: bold;
-    font-size: 20px;
-    top: 20px; /* Keep it at the top of the page */
-    left: 20px; /* Align it to the left */
-    z-index: 1;
-    margin: 20px;
-}
-select{
-    border: none;
-    font-weight: bold;
-    font-size: 20px;
-
-}
-button{
-    border: 1px solid black;
-    color: #000;
-    font-size: 40px;
-    font-weight: bold;
-}
-.player-x {
-    background-image: url('x-background.jpg'); /* Replace with your actual X background image */
-    background-size: cover;
-    background-position: center;
-    transition: background-image 0.5s ease-in-out; /* Smooth transition */
-}
-
-/* Background for player O */
-.player-o {
-    background-image: url('o.jpg'); /* Replace with your actual O background image */
-    background-size: cover;
-    background-position: center;
-    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+    filter: blur(3px);
+    z-index: -1;
 }

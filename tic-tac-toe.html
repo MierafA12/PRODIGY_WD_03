@@ -6,17 +6,19 @@
     <link rel="stylesheet" href="f.css">
     <title>Tic-Tac-Toe</title>
 </head>
-<body class="player-x">
-    <div class="theme-selector">
-        <label for="theme"> Theme: </label>
-        <select id="theme">
-            <option value="classic">Classic</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="modern">Modern</option>
-        </select>
-    </div>
+<body >
+    
 
     <div class="theGame">
+        <div class="theme-selector">
+            <label for="theme"> Theme: </label>
+            <select id="theme">
+                <option value="classic">Classic</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="modern">Modern</option>
+            </select>
+        </div>
+        <div class="ffff">
         <div class="all">
             <button><div id="btn1"></div></button>
             <button><div id="btn2"></div></button>
@@ -28,14 +30,19 @@
             <button><div id="btn8"></div></button>
             <button><div id="btn9"></div></button>
         </div>
-
-        <!-- Section to display the winner -->
-        <div id="winner" class="winner-message"></div>
-
         <!-- Section to display the move history -->
         <div class="history">
             <h2>Move History</h2>
             <ul id="history-list"></ul>
+        </div>
+        </div>
+        <!-- Section to display the winner -->
+        <div id="winner" class="winner-message"></div>
+
+        
+        <div class="controls">
+            <button id="start">Start Game</button>
+            <button id="reset">Reset Game</button>
         </div>
     </div>
 

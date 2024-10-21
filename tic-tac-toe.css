@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Add space between the elements */
+    gap: 20px; 
 }
 
 .all {
@@ -65,32 +65,21 @@ button:hover {
     transform: scale(1.05);
 }
 
-.player-x {
-    background-image: url('x-background.jpg');
-    background-size: cover;
-    background-position: center;
-    transition: background-image 0.5s ease-in-out;
-}
 
-.player-o {
-    background-image: url('o-background.jpg');
-    background-size: cover;
-    background-position: center;
-    transition: background-image 0.5s ease-in-out;
-}
 
 .history {
     margin-top: 20px;
-    padding: 10px;
+    padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 200px;
+    max-height: 150px;
+    
     overflow-y: auto;
 }
 
 .history h2 {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
     color: #333;
 }
@@ -105,10 +94,10 @@ button:hover {
 
 .controls {
     display: flex;
-    justify-content: space-between; /* Adjust to space buttons evenly */
-    width: 100%; /* Ensure controls span the width of the container */
-    max-width: 250px; /* Align width with the game grid */
-    gap: 15px; /* Space between buttons */
+    justify-content: space-between; 
+    width: 100%; 
+    max-width: 250px;
+    gap: 15px; 
     margin-top: 10px;
 }
 
@@ -119,7 +108,7 @@ button:hover {
     cursor: pointer;
     border: none;
     font-weight: bold;
-    flex: 1; /* Make buttons take equal space */
+    flex: 1; 
     transition: background-color 0.3s ease;
 }
 

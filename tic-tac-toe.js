@@ -23,7 +23,7 @@ document.getElementById('theme').addEventListener('change', function() {
     } else if (selectedTheme === 'fantasy') {
         buttons.forEach(btn => {
             btn.style.backgroundColor = '#FFD700';  
-            btn.style.color = '#8B0000';  t
+            btn.style.color = '#8B0000';  
             btn.style.fontFamily = '"Comic Sans MS", cursive, sans-serif';
         });
     } else if (selectedTheme === 'modern') {

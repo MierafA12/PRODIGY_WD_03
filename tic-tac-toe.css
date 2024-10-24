@@ -35,7 +35,7 @@ body {
 .theme-selector {
     font-weight: bold;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
 
 select {
@@ -147,4 +147,60 @@ body::before {
     background-position: center;
     filter: blur(3px);
     z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .all button {
+        padding: 30px;
+        font-size: 18px;
+    }
+
+    .theme-selector label {
+        font-size: 16px;
+    }
+
+    .theme-selector select {
+        font-size: 14px;
+    }
+
+    .history h2 {
+        font-size: 16px;
+    }
+
+    .winner-message {
+        font-size: 20px;
+    }
+
+    .controls button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .all button {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .theme-selector label {
+        font-size: 14px;
+    }
+
+    .theme-selector select {
+        font-size: 12px;
+    }
+
+    .history h2 {
+        font-size: 14px;
+    }
+
+    .winner-message {
+        font-size: 18px;
+    }
+
+    .controls button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
